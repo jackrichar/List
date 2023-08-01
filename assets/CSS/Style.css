@@ -1,0 +1,208 @@
+body
+{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    direction: rtl;
+}
+.Back
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1%;
+}
+.Front
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.User
+{
+    display: flex;
+    column-gap: 14%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    -webkit-user-select: none;
+    user-select: none;
+}
+/*this is for Fname*/
+
+.Fname-Back
+{
+    width: 25%;
+    position: relative;
+}
+
+.label-Fname
+{
+    font-size: 15px;
+    top: -40%;
+    background-color: white;
+    z-index: 1;
+    right: 6%;
+    position: absolute;
+    font-family: Vazir, sans-serif;
+}
+.Fname-input
+{
+    width: 100%;
+    height: 30px;
+    border: 1px solid #afaaaa;
+    background-color: transparent;
+    border-radius: 5px;
+    text-align: center;
+    font-family: Vazir, sans-serif;
+    outline: none;
+}
+
+/*This is for Lname*/
+
+.Lname-Back
+{
+    width: 25%;
+    position: relative;
+}
+.label-Lname
+{
+    font-size: 15px;
+    top: -40%;
+    background-color: white;
+    z-index: 1;
+    right: 6%;
+    position: absolute;
+    font-family: Vazir, sans-serif;
+}
+.Lname-input
+{
+    width: 100%;
+    height: 30px;
+    border: 1px solid #afaaaa;
+    background-color: transparent;
+    border-radius: 5px;
+    text-align: center;
+    font-family: Vazir, sans-serif;
+    outline: none;
+}
+/*This is for Age*/
+.Age-Back
+{
+    width: 25%;
+    position: relative;
+    margin-top: 4%;
+}
+
+.label-Age
+{
+    background-color: white;
+    z-index: 1;
+    font-size: 15px;
+    top: -40%;
+    right: 6%;
+    position: absolute;
+    font-family: Vazir, sans-serif;
+}
+.Age-input
+{
+    width: 100%;
+    height: 30px;
+    border: 1px solid #afaaaa;
+    background-color: transparent;
+    border-radius: 5px;
+    text-align: center;
+    font-family: Vazir, sans-serif;
+    outline: none;
+}
+/*This is for Grade*/
+
+.Grade-Back
+{
+    width: 25%;
+    position: relative;
+    margin-top: 4%;
+}
+.label-Grade
+{
+    background-color: white;
+    z-index: 1;
+    font-size: 15px;
+    top: -40%;
+    right: 6%;
+    position: absolute;
+    font-family: Vazir, sans-serif;
+}
+.Grade-select
+{
+    width: 104%;
+    height: 35px;
+    border: 1px solid #afaaaa;
+    background-color: transparent;
+    border-radius: 5px;
+    text-align: center;
+    font-family: Vazir, sans-serif;
+    outline: none;
+}
+
+/*This is for Address*/
+.Address-Back
+{
+    width: 64%;
+    position: relative;
+    margin-top: 4%;
+}
+
+.label-Address
+{
+    background-color: white;
+    z-index: 1;
+    font-size: 15px;
+    top: -8%;
+    right: 6%;
+    position: absolute;
+    font-family: Vazir, sans-serif;
+}
+
+.Address-input
+{
+
+    resize: none;
+    width: 100%;
+    height: 150px;
+    border: 1px solid #afaaaa;
+    background-color: transparent;
+    border-radius: 5px;
+    text-align: right;
+    font-family: Vazir, sans-serif;
+    outline: none;
+}
+
+.Submit-Back
+{
+    text-align: center;
+    width: 62%;
+    margin-top: 2%;
+
+}
+.Submit{
+    width: 50%;
+    height: 45px;
+    font-family: Vazir, sans-serif;
+    transition: background-color ease 153ms;
+    border-radius: 5px;
+    border: 1px solid #afaaaa;
+    outline: none;
+    background-color: #2cf12f;
+}
+
+.Submit:hover
+{
+    background-color: #08d319;
+}
+
+.Submit:active
+{
+    background-color: #39ff13;
+}

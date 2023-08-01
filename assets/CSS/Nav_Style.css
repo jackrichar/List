@@ -1,0 +1,89 @@
+body {
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: rgb(240, 135, 38);
+    height: 100vh;
+}
+@keyframes alert
+{
+    0%{transform: translateX(0px);opacity: 0%;}
+    25%{transform: translateX(20px);opacity: 25%;}
+    50%{transform: translateX(-20px);opacity: 50%;}
+    75%{transform: translateX(20px);opacity: 75%;}
+    100%{transform: translateX(0px);opacity: 100%;}
+}
+
+.Signin_Background {
+    margin-top: 5%;
+    width: 25%;
+    padding: 5%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.Signin_Front {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 600px;
+}
+.Form{
+    display: contents;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.User-Input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgb(121, 118, 118);
+    background-color: transparent;
+    outline: none;
+    text-align: center;
+    font-family: Vazir, sans-serif;
+    font-size: 16px;
+    caret-color: black;
+}
+.User-Password {
+    position: relative;
+    display: inline-block;
+}
+
+.User-Password i {
+    position: absolute;
+    top: 31%;
+    right: 1%;
+    font-size: 20px;
+    z-index: 1;
+}
+.User-Password i:hover{
+    cursor: pointer;
+    color:rgb(77, 76, 76);
+}
+
+.Back-Click{
+    text-align: center;
+}
+.Click{
+    width: 53%;
+    height: 45px;
+    border: 1px solid black;
+    font-family: Vazir;
+    background-color: rgb(25, 26, 26);
+    color: aliceblue;
+}
+.Click:hover{
+    opacity:.9;
+}
+.Click:active{
+    transform: translatex(.5rem) ;
+}

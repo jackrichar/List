@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="../CSS/Style.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+</head>
+<body>
+<div class="Back">
+    <div class="Front">
+        <form class="User" id="User">
+            <div class="Fname-Back">
+                <label for="Fname" class="label-Fname">نام</label>
+                <input type="text" id="Fname" class="Fname-input">
+            </div>
+            <div class="Lname-Back">
+                <label for="Lname" class="label-Lname">نام خانوادگی</label>
+                <input type="text" id="Lname" class="Lname-input">
+            </div>
+            <div class="Age-Back">
+                <label for="Age" class="label-Age">سن</label>
+                <input type="text" id="Age" class="Age-input">
+            </div>
+            <div class="Grade-Back">
+                <label for="Grade" class="label-Grade">مقطع تحصیلی</label>
+                <select id="Grade" class="Grade-select">
+                    <option selected hidden="hidden">انتخاب کن</option>
+                    <option value="ابتدایی">ابتدایی</option>
+                    <option value="متوسطه اول">متوسطه اول</option>
+                    <option value="متوسطه دوم">متوسطه دوم</option>
+                    <option value="دانشجو">دانشجو</option>
+                </select>
+            </div>
+            <div class="Address-Back">
+                <label for="Address" class="label-Address">آدرس</label>
+                <textarea id="Address" class="Address-input" cols="30" rows="10"></textarea>
+            </div>
+            <div class="Submit-Back">
+                <button type="submit" class="Submit">ثبت</button>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="../JS/Back2.js"></script>
+</body>
+</html>

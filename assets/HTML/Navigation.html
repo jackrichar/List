@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/52ee5253f4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/assets/CSS/Nav_Style.css">
+    <title>Navigation</title>
+</head>
+<body>
+    <div class="Signin_Background">
+        <div class="Signin_Front ">
+            <form class="Form">
+                <input type="text" class="User-Input" id="Name" placeholder="نام">
+                <input type="text" class="User-Input" id="Lname" placeholder="نام‌خانوادگی">
+                <input type="text" class="User-Input" id="National" placeholder="شماره ملی">
+                <input type="tel" class="User-Input" id="Phone" placeholder="شماره موبایل">
+                <label class="User-Password">
+                    <i class="fa-solid fa-eye-slash" onclick="Change()" id="Icon-Pass"></i>
+                    <input type="password" class="User-Input" id="Pass" placeholder="رمز">
+                </label>
+                <input type="password" class="User-Input" id="Cpass" placeholder="تکرار رمز">
+                <div class="Back-Click"><button type="button" class="Click" onclick="Check()">Signin</button></div>
+            </form>
+        </div>
+    </div>
+    <script src="/assets/JS/Back.js"></script>
+</body>
+</html>
