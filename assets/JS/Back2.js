@@ -4,7 +4,7 @@ const LastName = document.getElementById("Lname");
 const Age = document.getElementById("Age");
 const Grade = document.getElementById("Grade");
 const Address = document.getElementById("Address");
-let Person_info_base = [];
+const Person_info_base = [];
 Form.addEventListener('submit',e =>
 {
     e.preventDefault();
@@ -79,6 +79,17 @@ function checkinput()
         (function()
             {
                 document.getElementById("Age").style.cssText="outline:none";
+
+            }
+            , 1000)
+    }
+    if(GradeValue === '')
+    {
+        document.getElementById("Grade").style.cssText="outline: 1px solid red;transition:outline ease 153ms";
+        setTimeout
+        (function()
+            {
+                document.getElementById("Grade").style.cssText="outline:none";
 
             }
             , 1000)
