@@ -4,6 +4,7 @@ const LastName = document.getElementById("Lname");
 const Age = document.getElementById("Age");
 const Grade = document.getElementById("Grade");
 const Address = document.getElementById("Address");
+const user_input = document.querySelector(".Person-table");
 const Person_info_base = [];
 Form.addEventListener('submit',e =>
 {
@@ -39,6 +40,7 @@ function insert()
     {
         Person_info_base.push(Person_info);
     }
+    input_user();
     console.log(Person_info_base)
 }
 
@@ -52,55 +54,67 @@ function checkinput()
 
     if(FirstNameValue === '')
     {
-        document.getElementById("Fname").style.cssText="outline: 1px solid red;transition:outline ease 153ms";
+        document.getElementById("Fname").style.cssText="outline: 1px solid red;animation:move 0.5s";
+        document.querySelector(".label-Fname").style.cssText="animation:move 0.5s"
         setTimeout
         (function()
         {
-            document.getElementById("Fname").style.cssText="outline:none";
+            document.getElementById("Fname").style.cssText="outline:none;animation:none";
+            document.querySelector(".label-Fname").style.cssText="animation:none"
 
         }
         , 1000)
     }
     if(LastNameValue === '')
     {
-        document.getElementById("Lname").style.cssText="outline: 1px solid red;transition:outline ease 153ms";
+        document.getElementById("Lname").style.cssText="outline: 1px solid red;animation:move 0.5s";
+        document.querySelector(".label-Lname").style.cssText="animation:move 0.5s"
         setTimeout
         (function()
             {
-                document.getElementById("Lname").style.cssText="outline:none";
+                document.getElementById("Lname").style.cssText="outline:none;animation:none";
+                document.querySelector(".label-Lname").style.cssText="animation:none"
 
             }
             , 1000)
     }
     if(AgeValue === '')
     {
-        document.getElementById("Age").style.cssText="outline: 1px solid red;transition:outline ease 153ms";
+        document.getElementById("Age").style.cssText="outline: 1px solid red;animation:move 0.5s";
+        document.querySelector(".label-Age").style.cssText="animation:move 0.5s"
         setTimeout
         (function()
             {
-                document.getElementById("Age").style.cssText="outline:none";
+                document.getElementById("Age").style.cssText="outline:none;animation:none";
+                document.querySelector(".label-Age").style.cssText="animation:none"
+
 
             }
             , 1000)
     }
     if(GradeValue === '')
     {
-        document.getElementById("Grade").style.cssText="outline: 1px solid red;transition:outline ease 153ms";
+        document.getElementById("Grade").style.cssText="outline: 1px solid red;animation:move 0.5s";
+        document.querySelector(".label-Grade").style.cssText="animation:move 0.5s"
         setTimeout
         (function()
             {
-                document.getElementById("Grade").style.cssText="outline:none";
+                document.getElementById("Grade").style.cssText="outline:none;animation:none";
+                document.querySelector(".label-Grade").style.cssText="animation:none"
+
 
             }
             , 1000)
     }
     if(AddressValue === '')
     {
-        document.getElementById("Address").style.cssText="outline: 1px solid red;transition:outline ease 153ms";
+        document.getElementById("Address").style.cssText="outline: 1px solid red;animation:move 0.5s";
+        document.querySelector(".label-Address").style.cssText="animation:move 0.5s"
         setTimeout
         (function()
             {
-                document.getElementById("Address").style.cssText="outline:none";
+                document.getElementById("Address").style.cssText="outline:none;animation:none";
+                document.querySelector(".label-Address").style.cssText="animation:none"
 
             }
             , 1000)
@@ -108,7 +122,13 @@ function checkinput()
     else
     {
         insert()
+
     }
 
+
+}
+
+function input_user()
+{
 
 }
