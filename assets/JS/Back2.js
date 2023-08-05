@@ -5,7 +5,7 @@ const Age = document.getElementById("Age");
 const Grade = document.getElementById("Grade");
 const Address = document.getElementById("Address");
 const user_input = document.getElementById("User-input");
-const Person_info_base = [];
+let Person_info_base = [];
 
 Form.addEventListener('submit',e =>
 {
@@ -42,10 +42,12 @@ function insert()
     }
     if(Isit === false)
     {
+        Person_info_base = []
         Person_info_base.push(Person_info);
+        input_user();
     }
 
-    input_user();
+
     console.log(Person_info_base)
 }
 
