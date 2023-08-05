@@ -214,11 +214,13 @@ body
 {
     background-color: #39ff13;
 }
+
+
+/* This is for Table tag */
 .Person-table
 {
     border-collapse: collapse;
     width: 100%;
-
 }
 
 .Back-list
@@ -230,20 +232,32 @@ body
     align-items: center;
     display: flex;
 }
+
 .Front-list
 {
-width: 100%;
+   width: 90%;
 }
 
-.Tag-list
+.Tag-list tr
 {
     text-align: center;
+    border-radius: 10px;
 }
+
 .Tag-list th
 {
-
-    border: 1px solid black;
-    background-color: #858684;
     font-family: Vazir, sans-serif;
+    background-color: #858684;
+
     width: 14%;
 }
+
+.Person-table tr td
+{
+    text-align: center;
+    background-color: #858684;
+    font-family: Vazir, sans-serif;
+}
+
+
+

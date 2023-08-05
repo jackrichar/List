@@ -4,8 +4,9 @@ const LastName = document.getElementById("Lname");
 const Age = document.getElementById("Age");
 const Grade = document.getElementById("Grade");
 const Address = document.getElementById("Address");
-const user_input = document.querySelector(".Person-table");
+const user_input = document.getElementById("User-input");
 const Person_info_base = [];
+
 Form.addEventListener('submit',e =>
 {
     e.preventDefault();
@@ -14,6 +15,8 @@ Form.addEventListener('submit',e =>
 
 function insert()
 {
+    let ID = Person_info_base.length;
+
     const FirstNameValue = FirstName.value.trim();
     const LastNameValue = LastName.value.trim();
     const AgeValue = Age.value.trim();
@@ -21,7 +24,7 @@ function insert()
     const AddressValue = Address.value.trim();
 
     let Isit = false
-    Person_info_base.forEach((item)=>
+    Person_info_base.forEach((item,index)=>
         {
             if(item.FirstName === FirstNameValue && item.LastName === LastNameValue)
             {
@@ -35,11 +38,13 @@ function insert()
         Age: AgeValue,
         Grade:GradeValue,
         Address: AddressValue,
+        id:ID,
     }
     if(Isit === false)
     {
         Person_info_base.push(Person_info);
     }
+
     input_user();
     console.log(Person_info_base)
 }
@@ -130,5 +135,15 @@ function checkinput()
 
 function input_user()
 {
-
+    Person_info_base.map((value,index,array)=>{
+        user_input.innerHTML+=
+            `        <tr>
+           <td>${value.id}</td>
+           <td>${value.FirstName}</td>
+           <td>${value.LastName}</td>
+           <td>${value.Age}</td>
+           <td>${value.Grade}</td>
+            <td>${value.Address}</td>
+        </tr>`
+    });
 }
