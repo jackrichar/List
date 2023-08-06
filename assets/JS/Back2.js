@@ -5,7 +5,9 @@ const Age = document.getElementById("Age");
 const Grade = document.getElementById("Grade");
 const Address = document.getElementById("Address");
 const user_input = document.getElementById("User-input");
+const Table = document.querySelector(".Person-table");
 let Person_info_base = [];
+let ID
 
 Form.addEventListener('submit',e =>
 {
@@ -15,7 +17,7 @@ Form.addEventListener('submit',e =>
 
 function insert()
 {
-    let ID = Person_info_base.length;
+    ID = Person_info_base.length;
 
     const FirstNameValue = FirstName.value.trim();
     const LastNameValue = LastName.value.trim();
@@ -42,13 +44,9 @@ function insert()
     }
     if(Isit === false)
     {
-        Person_info_base = []
         Person_info_base.push(Person_info);
         input_user();
     }
-
-
-    console.log(Person_info_base)
 }
 
 function checkinput()
@@ -135,17 +133,56 @@ function checkinput()
 
 }
 
-function input_user()
-{
-    Person_info_base.map((value,index,array)=>{
-        user_input.innerHTML+=
-            `        <tr>
-           <td>${value.id}</td>
-           <td>${value.FirstName}</td>
-           <td>${value.LastName}</td>
-           <td>${value.Age}</td>
-           <td>${value.Grade}</td>
-            <td>${value.Address}</td>
-        </tr>`
+function input_user() {
+    const Person_info = Person_info_base[Person_info_base.length - 1];
+    user_input.insertAdjacentHTML(
+        'beforeend',
+        `<tr class="row">
+       <td>${Person_info.FirstName}</td>
+       <td>${Person_info.LastName}</td>
+       <td>${Person_info.Age}</td>
+       <td>${Person_info.Grade}</td>
+       <td>${Person_info.Address}</td>
+       <td><button type="click" data-index="${Person_info.id}" onclick="deleteRow(this)">حذف</button></td>
+     </tr>`
+    );
+}
+
+
+function deleteRow(button) {
+    const row = button.closest("tr.row");
+    const index = parseInt(button.getAttribute("data-index"));
+    console.log(index)
+    if (row) {
+        row.remove();
+        Person_info_base.splice(index, 1);
+        console.log(Person_info_base)
+    }
+}
+function searchByName() {
+    const searchInput = document.getElementById("search-input").value.trim();
+
+    const filteredRows = Person_info_base.filter((person) => {
+        const firstName = person.FirstName.toLowerCase();
+        const searchName = searchInput.toLowerCase();
+        return firstName.includes(searchName);
+    });
+
+    user_input.innerHTML = '';
+    filteredRows.forEach((person) => {
+        user_input.insertAdjacentHTML(
+            'afterbegin',
+            `<tr class="row">
+           <td>${person.FirstName}</td>
+           <td>${person.LastName}</td>
+           <td>${person.Age}</td>
+           <td>${person.Grade}</td>
+           <td>${person.Address}</td>
+           <td><button type="click" data-index="${person.id}" onclick="deleteRow(this)">حذف</button></td>
+         </tr>`
+        );
     });
 }
+
+
+
