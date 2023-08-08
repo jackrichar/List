@@ -39,9 +39,24 @@ function insert()
             }
         }
     )
-
+    let price;
     let LastPrice = parseInt(PriceValue)*(parseInt(DiscountValue) / 100);
-    LastPrice=parseInt(PriceValue) - LastPrice;
+    LastPrice = parseInt(PriceValue) - LastPrice;
+    let group = [];
+    while (LastPrice>0)
+    {
+        const digit = parseInt(LastPrice) % 1000;
+        group.unshift(digit);
+        LastPrice = (LastPrice-digit) / 1000;
+    }
+    if(group[1]===0||group[2]===0)
+    {
+        price = 'تومان'+' '+group+'00';
+    }
+    else
+    {
+        price = 'تومان'+' '+group;
+    }
 
 
     const Person_info = {
@@ -49,7 +64,7 @@ function insert()
         LastName: LastNameValue,
         Age: AgeValue,
         Grade:GradeValue,
-        Price:LastPrice,
+        Price:price,
         Address: AddressValue,
         id:ID,
     }
@@ -197,22 +212,22 @@ function deleteRow(button) {
     Swal.fire({
         title: 'آیا مطمئن هستید؟',
         text: "شما نمی توانید این را برگردانید!",
-        icon: 'warning', // به جای 'هشدار' از 'warning' استفاده شود
+        icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: 'بله حذفش کن!'
+        cancelButtonText: 'Cancel',
+        confirmButtonText: 'Yes'
     }).then((result) => {
         if (result.isConfirmed) {
             if (row) {
                 row.remove();
-                Person_info_base.splice(index, 1); // تصحیح شده: index-index به جای index
+                Person_info_base.splice(index, 1);
                 console.log(Person_info_base);
             }
             Swal.fire(
                 'حذف شد!',
                 'فایل شما حذف شده است.',
-                'success'
             )
         }
     });

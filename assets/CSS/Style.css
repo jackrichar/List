@@ -378,5 +378,8 @@ body
 {
     color: white;
 }
+.swal2-Title,.swal2-popup{
+    font-family:'Vazir', sans-serif;
+}
 
 
