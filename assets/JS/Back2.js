@@ -1,3 +1,4 @@
+
 const Form = document.getElementById("User");
 const FirstName = document.getElementById("Fname");
 const LastName = document.getElementById("Lname");
@@ -25,6 +26,8 @@ function insert()
     const LastNameValue = LastName.value.trim();
     const AgeValue = Age.value.trim();
     const GradeValue = Grade.value.trim();
+    const PriceValue = Price.value.trim();
+    const DiscountValue = Discount.value.trim();
     const AddressValue = Address.value.trim();
 
     let Isit = false
@@ -36,11 +39,17 @@ function insert()
             }
         }
     )
+
+    let LastPrice = parseInt(PriceValue)*(parseInt(DiscountValue) / 100);
+    LastPrice=parseInt(PriceValue) - LastPrice;
+
+
     const Person_info = {
         FirstName: FirstNameValue,
         LastName: LastNameValue,
         Age: AgeValue,
         Grade:GradeValue,
+        Price:LastPrice,
         Address: AddressValue,
         id:ID,
     }
@@ -174,8 +183,9 @@ function input_user() {
        <td>${Person_info.LastName}</td>
        <td>${Person_info.Age}</td>
        <td>${Person_info.Grade}</td>
+       <td>${Person_info.Price}</td>
        <td>${Person_info.Address}</td>
-       <td><button type="click" data-index="${Person_info.id}" onclick="deleteRow(this)">حذف</button></td>
+       <td><i class="fa-solid fa-trash-can" id="icon" data-index="${Person_info.id}" onclick="deleteRow(this)"></i></td>
      </tr>`
     );
 }
@@ -184,13 +194,31 @@ function input_user() {
 function deleteRow(button) {
     const row = button.closest("tr.row");
     const index = parseInt(button.getAttribute("data-index"));
-    console.log(index)
-    if (row) {
-        row.remove();
-        Person_info_base.splice(index-index, 1);
-        console.log(Person_info_base)
-    }
+    Swal.fire({
+        title: 'آیا مطمئن هستید؟',
+        text: "شما نمی توانید این را برگردانید!",
+        icon: 'warning', // به جای 'هشدار' از 'warning' استفاده شود
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'بله حذفش کن!'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            if (row) {
+                row.remove();
+                Person_info_base.splice(index, 1); // تصحیح شده: index-index به جای index
+                console.log(Person_info_base);
+            }
+            Swal.fire(
+                'حذف شد!',
+                'فایل شما حذف شده است.',
+                'success'
+            )
+        }
+    });
 }
+
+
 function searchByName() {
     const searchInput = document.getElementById("search-input").value.trim();
 
@@ -209,12 +237,15 @@ function searchByName() {
            <td>${person.LastName}</td>
            <td>${person.Age}</td>
            <td>${person.Grade}</td>
+           <td>${person.Price}</td>
            <td>${person.Address}</td>
-           <td><button type="click" data-index="${person.id}" onclick="deleteRow(this)">حذف</button></td>
+           <td><i class="fa-solid fa-trash-can" data-index="${person.id}" onclick="deleteRow(this)"></i></td>
          </tr>`
         );
     });
 }
+
+
 
 
 

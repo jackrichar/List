@@ -10,7 +10,6 @@ body
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 1%;
     position: relative;
 }
 .Front
@@ -23,7 +22,7 @@ body
 .User
 {
     display: flex;
-    column-gap: 14%;
+    column-gap: 10%;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -101,7 +100,6 @@ body
 {
     width: 25%;
     position: relative;
-    margin-top: 4%;
 }
 
 .label-Age
@@ -219,7 +217,7 @@ body
 /*This is for Address*/
 .Address-Back
 {
-    width: 64%;
+    width: 95%;
     position: relative;
     margin-top: 4%;
 }
@@ -240,7 +238,7 @@ body
 
     resize: none;
     width: 100%;
-    height: 150px;
+    height: 132px;
     border: 1px solid #afaaaa;
     background-color: transparent;
     border-radius: 5px;
@@ -314,14 +312,20 @@ body
 .Person-table
 {
     border-collapse: collapse;
+    border-radius: 30px 30px 0 0;
     width: 100%;
+    border-style: hidden;
+    box-shadow: 0 10px 10px 1px #666;
+    background-color: #074887;
+
+
 }
 
 .Back-list
 {
     position: absolute;
     width: 100%;
-    top: 80%;
+    top: 70%;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -332,26 +336,47 @@ body
    width: 90%;
 }
 
-.Tag-list tr
+.Tag-list
 {
     text-align: center;
-    border-radius: 10px;
-}
-
-.Tag-list th
-{
     font-family: Vazir, sans-serif;
-    background-color: #858684;
-
-    width: 14%;
+    height: 50px;
+    color: white;
 }
 
-.Person-table tr td
+.tag
 {
+    width: 16%;
+}
+
+.row
+{
+    width: 0;
+    height: 45px;
     text-align: center;
-    background-color: #858684;
+    background-color: rgba(250, 250, 250, 0.97);
     font-family: Vazir, sans-serif;
 }
+.row:hover
+{
+    background-color: #6b6969;
+}
 
+
+
+
+
+#icon
+{
+    font-size: 20px;
+}
+#icon:hover
+{
+    color: red;
+}
+#icon:active
+{
+    color: white;
+}
 
 
