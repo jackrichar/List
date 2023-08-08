@@ -3,6 +3,8 @@ const FirstName = document.getElementById("Fname");
 const LastName = document.getElementById("Lname");
 const Age = document.getElementById("Age");
 const Grade = document.getElementById("Grade");
+const Price = document.getElementById("Price");
+const Discount = document.getElementById("Discount");
 const Address = document.getElementById("Address");
 const user_input = document.getElementById("User-input");
 const Table = document.querySelector(".Person-table");
@@ -26,7 +28,7 @@ function insert()
     const AddressValue = Address.value.trim();
 
     let Isit = false
-    Person_info_base.forEach((item,index)=>
+    Person_info_base.forEach((item)=>
         {
             if(item.FirstName === FirstNameValue && item.LastName === LastNameValue)
             {
@@ -55,6 +57,8 @@ function checkinput()
     const LastNameValue = LastName.value.trim();
     const AgeValue = Age.value.trim();
     const GradeValue = Grade.value.trim();
+    const PriceValue = Price.value.trim();
+    const DiscountValue = Discount.value.trim();
     const AddressValue = Address.value.trim();
 
     if(FirstNameValue === '')
@@ -111,6 +115,34 @@ function checkinput()
             }
             , 1000)
     }
+    if(PriceValue==='')
+    {
+        document.getElementById("Price").style.cssText="outline: 1px solid red;animation:move 0.5s";
+        document.querySelector(".label-Price").style.cssText="animation:move 0.5s"
+        setTimeout
+        (function()
+            {
+                document.getElementById("Price").style.cssText="outline:none;animation:none";
+                document.querySelector(".label-Price").style.cssText="animation:none"
+
+
+            }
+            , 1000)
+    }
+    if(DiscountValue==='')
+    {
+        document.getElementById("Discount").style.cssText="outline: 1px solid red;animation:move 0.5s";
+        document.querySelector(".label-Discount").style.cssText="animation:move 0.5s"
+        setTimeout
+        (function()
+            {
+                document.getElementById("Discount").style.cssText="outline:none;animation:none";
+                document.querySelector(".label-Discount").style.cssText="animation:none"
+
+
+            }
+            , 1000)
+    }
     if(AddressValue === '')
     {
         document.getElementById("Address").style.cssText="outline: 1px solid red;animation:move 0.5s";
@@ -155,7 +187,7 @@ function deleteRow(button) {
     console.log(index)
     if (row) {
         row.remove();
-        Person_info_base.splice(index, 1);
+        Person_info_base.splice(index-index, 1);
         console.log(Person_info_base)
     }
 }

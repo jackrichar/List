@@ -34,6 +34,14 @@
                     <option value="دانشجو">دانشجو</option>
                 </select>
             </div>
+            <div class="Price-Back">
+                <label for="Price" class="label-Price">قیمت</label>
+                <input type="text" id="Price" class="Price-input">
+            </div>
+            <div class="Discount-Back">
+                <label for="Discount" class="label-Discount">تخفیف</label>
+                <input type="text" id="Discount" class="Discount-input">
+            </div>
             <div class="Address-Back">
                 <label for="Address" class="label-Address">آدرس</label>
                 <textarea id="Address" class="Address-input" cols="30" rows="10"></textarea>
@@ -43,22 +51,25 @@
             </div>
             <div class="Search-Back">
                 <label for="search-input" class="label-Search">جستوجو</label>
-                <input type="search" onkeydown="searchByName()" id="search-input" class="Search-input">
+                <input type="search" onkeyup="searchByName()" id="search-input" class="Search-input">
             </div>
         </form>
     </div>
 </div>
 <div class="Back-list">
     <div class="Front-list">
-        <table class="Person-table" id="User-input">
-            <tr class="Tag-list">
+        <table class="Person-table">
+            <thead class="Tag-list">
                 <th>نام</th>
                 <th>نام‌خانوادگی</th>
                 <th>سن</th>
                 <th>مقطع تحصیلی</th>
                 <th>آدرس</th>
                 <th></th>
-            </tr>
+            </thead>
+            <tbody id="User-input">
+
+            </tbody>
         </table>
     </div>
 </div>

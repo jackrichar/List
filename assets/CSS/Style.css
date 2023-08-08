@@ -18,6 +18,7 @@ body
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 445px;
 }
 .User
 {
@@ -26,7 +27,7 @@ body
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    width: 75%;
+    width: 40%;
     -webkit-user-select: none;
     user-select: none;
 }
@@ -144,7 +145,7 @@ body
 }
 .Grade-select
 {
-    width: 104%;
+    width: 105%;
     height: 35px;
     border: 1px solid #afaaaa;
     background-color: transparent;
@@ -153,6 +154,67 @@ body
     font-family: Vazir, sans-serif;
     outline: none;
 }
+
+/* This is for Price */
+.Price-Back
+{
+    width: 25%;
+    position: relative;
+    margin-top: 4%;
+}
+.label-Price
+{
+    background-color: white;
+    z-index: 1;
+    font-size: 15px;
+    top: -40%;
+    right: 6%;
+    position: absolute;
+    font-family: Vazir, sans-serif;
+}
+
+.Price-input
+{
+    width: 100%;
+    height: 30px;
+    border: 1px solid #afaaaa;
+    background-color: transparent;
+    border-radius: 5px;
+    text-align: center;
+    font-family: Vazir, sans-serif;
+    outline: none;
+}
+
+/*This is for Discount */
+.Discount-Back
+{
+    width: 25%;
+    position: relative;
+    margin-top: 4%;
+}
+.label-Discount
+{
+    background-color: white;
+    z-index: 1;
+    font-size: 15px;
+    top: -40%;
+    right: 6%;
+    position: absolute;
+    font-family: Vazir, sans-serif;
+}
+
+.Discount-input
+{
+    width: 100%;
+    height: 30px;
+    border: 1px solid #afaaaa;
+    background-color: transparent;
+    border-radius: 5px;
+    text-align: center;
+    font-family: Vazir, sans-serif;
+    outline: none;
+}
+
 
 /*This is for Address*/
 .Address-Back
@@ -219,7 +281,7 @@ body
 
 .Search-Back
 {
-    width: 64%;
+    width: 66%;
     position: relative;
     margin-top: 4%;
 }
@@ -259,7 +321,7 @@ body
 {
     position: absolute;
     width: 100%;
-    top: 75%;
+    top: 80%;
     justify-content: center;
     align-items: center;
     display: flex;
