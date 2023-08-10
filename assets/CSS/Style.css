@@ -5,6 +5,15 @@ body
     display: flex;
     direction: rtl;
 }
+@font-face {
+    font-family: "IRANSansWeb(FaNum)";
+    src: url("https://db.onlinewebfonts.com/t/5c53f1a72f61b5b51e2ea79a22ebc38b.eot");
+    src: url("https://db.onlinewebfonts.com/t/5c53f1a72f61b5b51e2ea79a22ebc38b.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/5c53f1a72f61b5b51e2ea79a22ebc38b.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/5c53f1a72f61b5b51e2ea79a22ebc38b.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/5c53f1a72f61b5b51e2ea79a22ebc38b.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/5c53f1a72f61b5b51e2ea79a22ebc38b.svg#IRANSansWeb(FaNum)")format("svg");
+}
 .Back
 {
     display: flex;
@@ -53,7 +62,7 @@ body
     z-index: 1;
     right: 6%;
     position: absolute;
-    font-family: Vazir, sans-serif;
+    font-family: "IRANSansWeb(FaNum)";
 }
 .Fname-input
 {
@@ -63,7 +72,7 @@ body
     background-color: transparent;
     border-radius: 5px;
     text-align: center;
-    font-family: Vazir, sans-serif;
+    font-family: "IRANSansWeb(FaNum)";
     outline: none;
 }
 
@@ -82,7 +91,7 @@ body
     z-index: 1;
     right: 6%;
     position: absolute;
-    font-family: Vazir, sans-serif;
+    font-family: "IRANSansWeb(FaNum)";
 }
 .Lname-input
 {
@@ -92,7 +101,7 @@ body
     background-color: transparent;
     border-radius: 5px;
     text-align: center;
-    font-family: Vazir, sans-serif;
+    font-family: "IRANSansWeb(FaNum)";
     outline: none;
 }
 /*This is for Age*/
@@ -110,7 +119,7 @@ body
     top: -40%;
     right: 6%;
     position: absolute;
-    font-family: Vazir, sans-serif;
+    font-family: "IRANSansWeb(FaNum)";
 }
 .Age-input
 {
@@ -120,7 +129,7 @@ body
     background-color: transparent;
     border-radius: 5px;
     text-align: center;
-    font-family: Vazir, sans-serif;
+    font-family: "IRANSansWeb(FaNum)";
     outline: none;
 }
 /*This is for Grade*/
@@ -139,7 +148,7 @@ body
     top: -40%;
     right: 6%;
     position: absolute;
-    font-family: Vazir, sans-serif;
+    font-family: "IRANSansWeb(FaNum)";
 }
 .Grade-select
 {
@@ -149,7 +158,7 @@ body
     background-color: transparent;
     border-radius: 5px;
     text-align: center;
-    font-family: Vazir, sans-serif;
+    font-family: "IRANSansWeb(FaNum)";
     outline: none;
 }
 
@@ -168,7 +177,8 @@ body
     top: -40%;
     right: 6%;
     position: absolute;
-    font-family: Vazir, sans-serif;
+    font-family: "IRANSansWeb(FaNum)";
+
 }
 
 .Price-input
@@ -179,9 +189,11 @@ body
     background-color: transparent;
     border-radius: 5px;
     text-align: center;
-    font-family: Vazir, sans-serif;
+    font-family: "IRANSansWeb(FaNum)";
+    font-feature-settings: "tnum";
     outline: none;
 }
+
 
 /*This is for Discount */
 .Discount-Back
@@ -198,7 +210,7 @@ body
     top: -40%;
     right: 6%;
     position: absolute;
-    font-family: Vazir, sans-serif;
+    font-family: "IRANSansWeb(FaNum)";
 }
 
 .Discount-input
@@ -209,7 +221,7 @@ body
     background-color: transparent;
     border-radius: 5px;
     text-align: center;
-    font-family: Vazir, sans-serif;
+    font-family: "IRANSansWeb(FaNum)";
     outline: none;
 }
 
@@ -230,7 +242,7 @@ body
     top: -8%;
     right: 6%;
     position: absolute;
-    font-family: Vazir, sans-serif;
+    font-family: "IRANSansWeb(FaNum)";
 }
 
 .Address-input
@@ -243,7 +255,7 @@ body
     background-color: transparent;
     border-radius: 5px;
     text-align: right;
-    font-family: Vazir, sans-serif;
+    font-family: "IRANSansWeb(FaNum)";
     outline: none;
 }
 
@@ -257,7 +269,7 @@ body
 .Submit{
     width: 50%;
     height: 45px;
-    font-family: Vazir, sans-serif;
+    font-family: "IRANSansWeb(FaNum)";
     transition: background-color ease 153ms;
     border-radius: 5px;
     border: 1px solid #afaaaa;
@@ -279,7 +291,7 @@ body
 
 .Search-Back
 {
-    width: 66%;
+    width: 87%;
     position: relative;
     margin-top: 4%;
 }
@@ -292,7 +304,7 @@ body
     top: -25%;
     right: 6%;
     position: absolute;
-    font-family: Vazir, sans-serif;
+    font-family: "IRANSansWeb(FaNum)";
 }
 
 .Search-input{
@@ -303,8 +315,9 @@ body
     background-color: transparent;
     border-radius: 5px;
     text-align: center;
-    font-family: Vazir, sans-serif;
+    font-family: "IRANSansWeb(FaNum)";
     outline: none;
+    position: relative;
 }
 
 
@@ -339,7 +352,7 @@ body
 .Tag-list
 {
     text-align: center;
-    font-family: Vazir, sans-serif;
+    font-family: "IRANSansWeb(FaNum)";
     height: 50px;
     color: white;
 }
@@ -355,11 +368,11 @@ body
     height: 45px;
     text-align: center;
     background-color: rgba(250, 250, 250, 0.97);
-    font-family: Vazir, sans-serif;
+    font-family: "IRANSansWeb(FaNum)";
 }
 .row:hover
 {
-    background-color: #6b6969;
+    background-color: #bab8b8;
 }
 
 
@@ -379,7 +392,27 @@ body
     color: white;
 }
 .swal2-Title,.swal2-popup{
-    font-family:'Vazir', sans-serif;
+    font-family: "IRANSansWeb(FaNum)";
 }
 
+.Filter-Back
+{
+    z-index: 1;
+    position:absolute;
+    top: 0;
+    width: 48%;
+    left: -24%;
+}
+
+.Filter
+{
+    width: 50%;
+    height: 50px;
+    border: 1px solid #afaaaa;
+    background-color: white;
+    border-radius: 5px;
+    text-align: center;
+    font-family: "IRANSansWeb(FaNum)";
+    outline: none;
+}
 

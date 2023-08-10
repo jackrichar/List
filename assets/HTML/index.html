@@ -22,7 +22,7 @@
             </div>
             <div class="Age-Back">
                 <label for="Age" class="label-Age">سن</label>
-                <input type="text" id="Age" class="Age-input">
+                <input type="text" id="Age" class="Age-input" pattern="[0-9]+" title="Please enter numbers only">
             </div>
             <div class="Grade-Back">
                 <label for="Grade" class="label-Grade">مقطع تحصیلی</label>
@@ -36,11 +36,11 @@
             </div>
             <div class="Price-Back">
                 <label for="Price" class="label-Price">قیمت</label>
-                <input type="text" id="Price" class="Price-input">
+                <input type="text" id="Price" class="Price-input"  pattern="[0-9]+" title="Please enter numbers only" onkeyup="Check_input()">
             </div>
             <div class="Discount-Back">
                 <label for="Discount" class="label-Discount">تخفیف</label>
-                <input type="text" id="Discount" class="Discount-input">
+                <input type="text" id="Discount" class="Discount-input" pattern="[0-9]+" title="Please enter numbers only">
             </div>
             <div class="Address-Back">
                 <label for="Address" class="label-Address">آدرس</label>
@@ -52,6 +52,16 @@
             <div class="Search-Back">
                 <label for="search-input" class="label-Search">جستوجو</label>
                 <input type="search" onkeyup="searchByName()" id="search-input" class="Search-input">
+                <div class="Filter-Back">
+                    <select class="Filter">
+                        <option value="" hidden="hidden">انتخاب کن</option>
+                        <option value="FirstName">نام</option>
+                        <option value="LastName">نام خانوادگی</option>
+                        <option value="Age">سن</option>
+                        <option value="Grade">مقطع تحصیلی</option>
+                        <option value="Price">قیمت اصلی</option>
+                    </select>
+                </div>
             </div>
         </form>
     </div>
